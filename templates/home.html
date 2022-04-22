@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+   {% block content %} 
+   <body>
+       <br>
+   </br>
+   <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">Get the CV parsed with Hireability</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Hireability just keeps getting better.</h2>
+          <div data-aos="fade-up" data-aos-delay="800">
+            <a href="login.html" class="btn-get-started scrollto">Get Started</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+          <img src="{% static 'image/cv.jpg' %}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients clients">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'image/client-1.png' %}" class="img-fluid" alt="" data-aos="zoom-in">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'image/client-2.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'image/client-3.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="200">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'image/client-4.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="300">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'image/client-5.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="400">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6">
+            <img src="{% static 'image/client-6.png' %}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="500">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+    <br>
+</br> <br>
+</br>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services text-center">
+        <div class="container">
+  
+          <div class="section-title" data-aos="fade-up">
+            <h2>Why Resume Parsing Software?</h2>
+            <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fug</p>
+          </div>
+  <br>
+        </br>
+          <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon"><i class="fa fa-calendar-times-o"></i></div>
+                <h4 class="title"><a href="">Saves time:</a></h4>
+                <p class="description">By recognizing and selecting applicants with relevant abilities and information,
+                    it saves hiring departments hours spent manually searching through each resume.</p>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon"><i class="fa fa-check-square-o"></i></div>
+                <h4 class="title"><a href="">Hiring Quickly:</a></h4>
+                <p class="description">Resume Parser aids in the reduction of the time-consuming and errorprone procedure of having individuals manually enter resume data into hiring software.</p>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon"><i class="fa fa-group"></i></div>
+                <h4 class="title"><a href="">Smarter hiring:</a></h4>
+                <p class="description">Parsing system increases the chances of finding a wide range of
+                    qualified applicants that fit the job specifications. So, it is more likely to hire the candidate who is the ideal fit for the job based on the
+                    particular applicant experience.</p>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+              <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon"><i class="fa fa-handshake-o"></i></div>
+                <h4 class="title"><a href="">Remove bias: </a></h4>
+                <p class="description">By removing information from the resume such as age, gender, and place
+                    of birth, it is possible to avoid unwanted biases while analyzing a resume</p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Services Section -->
+  <br>
+    </br>
+{% endblock %}

@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en" id ="Invert Color">
+
+<head>
+<title>Hire Ability</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/myscripts.js') }}"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="header">
+  <h2></h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+</div>
+
+
+<div></div>
+
+<body>
+
+
+    <header>
+        <div class="container">
+            <div class="row w100">
+                <div class="col-lg-5 col-md-12 col-sm-12 col-12 ">
+                    <h3><img  class="float-left" src="{{ url_for('static', filename='image/hireability.png') }}" alt="logo1" id="logo"  width="280px" height="150px"></h3>
+                </div>
+                
+
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12" style="  font-size:14px;">
+                    <table style="height: 10px; width: 100%;">
+                        <tbody>
+                            <tr>
+                             <i id="topicon" title="Opening Hour"style="font-size:26px" class="fa">&#xf017;</i>
+                                    &nbsp;&nbsp;09:00AM -
+                                    05:00PM &nbsp; | &nbsp;
+                                    <i id="icon" title="Contact Number"style="font-size:26px" class="fa">&#xf095;</i>&nbsp;
+                                    +977-xxxxxxxx25 &nbsp; | &nbsp;
+                                     <a onclick="InvertColor()" title="Invert Color for color blindness"><i  id="icon" style="font-size:25px" class="fa fa-adjust"></i> Invert Color</a>
+                          </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    
+    <div class="Readability">
+    <ul class="navbar1">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html">Home </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="myFunction()" href="">Resume Parser </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dataextraction.html">Data Extraction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn login" href="login.html">Login</a>
+                      </li>
+          </ul>
+                
+    </ul>
+    </div>
+  
+
+ <section>
+        <div class="row justify-content-center" style="padding-top: 20px;">
+            <div class="col-lg-8 text-center">
+                <h2 class="mt-0">Terms And Conditions</h2>
+                <hr class="divider my-4">
+ <div class="Button">
+                <button id="btn-decrease">A-</button>
+                <button id="btn-original">A</button>
+                <button id="btn-increase">A+</button>
+            </div>
+        
+
+
+         <div class="Readability">
+<div class="entry-content" id="entry-content-anchor" style="text-align:left">
+<p><strong>1.0 General</strong></p>
+<p><strong>1.1 Who are we?</strong></p>
+<p><strong>1.2 Acceptance of the terms of use</strong></p>
+<p><strong>1.3 Liability for registration</strong></p>
+<p><strong>1.4 Number of accounts</strong></p>
+<p><strong>1.5 Price policy</strong></p>
+<p><strong>1.6 Licensing</strong></p>
+<p><strong>1.7 Booking conditions or purchase of vouchers</strong></p>
+<p><strong>1.8 Terms of participation</strong></p>
+<p><strong>1.9 Changes or cancellations</strong></p>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>1.0 General</strong></p>
+<p><strong>1.1 Who are we?</strong></p>
+<p>The hireability, is a software used to parse,  email: <a href="mailto:prasu@xyz.com">info@prashu.com</a>, telephone number +977-98********</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>&nbsp;</p>
+<p><strong>1.2 Acceptance of the terms of use</strong></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p><strong>1.3 Liability for registration</strong></p>
+<p>Records must be made by individuals. If it is necessary to register a company, it will be mandatory for the registration to include the name of the person who legally represents it. Pseudonyms or false names are not allowed. Experitour.com reserves the right to delete any account created if this principle is not observed.</p>
+<p><strong>1.4 Number of accounts</strong></p>
+<p>Each entity can have up to two accounts. A vendor account and an account for vendor (if you want to sell products from other Vendors). If the same entity creates two accounts then two different email addresses must be used, one for each account.</p>
+<p>The same goes for Customers. If a Customer also wishes to sell the products advertised on the experitour.com platform, they may create an agent account. Again, you will need two different email addresses.</p>
+<p><strong>1.5 Price policy</strong></p>
+<p>The prices shown on the platform experitour.com are the sole responsibility of the companies that provide the services. These may vary according to the pricing policy of such companies, without prior notice or special reason that is not justified. Suppliers of the services are free to make promotions or create packages that include various services they provide.</p>
+<p>We also work with commissioners who use the platform as a tool for selling the products contained in it without, however, having any links with either experitour.com or the Suppliers of the experiences. These commission agents may be individual companies or individuals. In any case experitour.com keeps a record of all of them so that it is known precisely who releases or helps selling tickets for the experiments.</p>
+<p><strong>1.6 Licensing</strong></p>
+<p>All Service Providers sold on the experitour.com platform, having their registered office in Portugal, can only present their products or services if they have a license from the activity regulator (Tourism of Portugal), and it is mandatory to mention the number of RNAAT in the area that is reserved on the platform.</p>
+<p>All operators based in other countries are exempt from this prerogative.</p>
+<p><strong>1.7 Booking conditions or purchase of vouchers</strong></p>
+<p>The conditions of reservation or sale / purchase of vouchers are defined by each Supplier and for each specific product. These conditions shall be included in each product’s data sheet. No product should be offered or purchased in which there is no clear and unambiguous information that is necessary for the full clarification of the product.</p>
+<p>When making a purchase, all conditions described in the presentation of the experiment are expressly accepted.</p>
+<p>Supplier shall be responsible for any alteration or acceptance of interpretations that differ from the foregoing.</p>
+<p>Purchases must be made by one person. In case of purchases made by or for companies, the person who obligates the company must be indicated.</p>
+<p><strong>1.8 Terms of participation</strong></p>
+<p>You are solely responsible for the information you provide at the time of purchase.</p>
+<p>The Supplier has the right to reject your admission if incorrect information has been provided during the ticket acquisition process. In this case there will be no right to any refund of amounts paid.</p>
+<p>If you endanger yourself or other participants in the experience, the Supplier has the right to exclude you from participation. In this case you will not be entitled to claim any refund of amounts paid.</p>
+&nbsp;</p>
+
+                </div>
+                </div>
+                </section>
+
+
+   <style>
+
+    	/* Text Zoom Style */
+
+.textzoombox {
+    max-width: 1500px;
+    width: 100%;
+    margin: 10px 0px;
+    position: relative;
+    margin-left: 460px;
+}
+
+
+
+.textzoombox .buttons button {
+    background-color: #333;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin: 0px 5px;
+}
+    </style>
+
+  
+    <!-- Footer -->
+    <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="container"  >
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify" style="color:whitesmoke";>Hireability: <i style="color:whitesmoke";></i>The foundation of this project is a resume automation system.In the system NER, Regex, NLTK, and Spacy's parse matcher will extract necessary information such as Name, Address, Email, phone number, Nationality, Skills [Hard Skills,Soft Skills], Education, Experience, Experience Year, Languages etc from the CV  in .json format.</p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Need Any Help</h6>
+              <ul class="footer-links">
+                
+                &nbsp;
+                <li><a href="faq.html" style="color:whitesmoke";>Frequently Asked Questions</a></li>
+                &nbsp;
+                <li><a href="terms.html" style="color:whitesmoke";>Terms and Conditions</a></li>
+                &nbsp;
+                <li><a href="home.html" style="color:whitesmoke";>Back to top</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Visit us at  &nbsp;</h6>
+             
+  
+                <i class="fa fa-map-marker" style="color:whitesmoke";> &nbsp; Naxal, Kathmandu</i>
+               
+                <br></br>
+                <i class="fa fa-phone" style="color:whitesmoke";> &nbsp; +9860*****0</i>
+                
+                <br></br>
+                 <i class="fa fa-envelope"style="color:whitesmoke";> &nbsp; hireability@gmail.com</i>
+                
+                
+                </div>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container" style="color:#26272b";>
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text" style="color:whitesmoke";>Copyright &copy; 2021 All Rights Reserved by 
+           <a href="#" style="color:whitesmoke";>Prasuna</a>.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="facebook.com" style="color:whitesmoke";><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="twitter.com" style="color:whitesmoke";><i class="fa fa-twitter"></i></a></li>
+                <li><a class="instagram" href="instagram.com" style="color:whitesmoke";><i class="fa fa-instagram"></i></a></li>
+                <li><a class="linkedin" href="linkedin.com" style="color:whitesmoke";><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
+    
+    <style>
+      .text-justify{
+      font-size: 16px;
+  line-height: 18px;
+      }
+    </style>
+    <script>
+window.onscroll = function() {myFunction()};
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+$(document).ready(function() {
+	var affectedElements = $(".Readability");
+	var isTextZoomTriggered = false;
+	var textZoomLevel = 0;
+
+	affectedElements.each(function() {
+		// Store the original size in a data attribute so size can be reset
+		$(this).data("original-size", $(this).css("font-size") );
+	});
+
+	$("#btn-increase").click(function() {
+		if (!isTextZoomTriggered) {
+		  SetOriginalFontSize(affectedElements);
+		  isTextZoomTriggered = true;
+		}
+		if (textZoomLevel < 2) {
+		  ChangeFontSize(2);
+		  MatchHeight();
+		  textZoomLevel++;
+		}
+		MatchHeight();  // Fired twice
+	});
+	$("#btn-decrease").click(function() {
+		if (!isTextZoomTriggered) {
+			SetOriginalFontSize(affectedElements);
+			isTextZoomTriggered = true;
+		}
+		if (textZoomLevel > -2) {
+			ChangeFontSize(-2);
+			MatchHeight();
+			textZoomLevel--;
+		}
+		MatchHeight();  // Fired twice
+	});
+	$("#btn-original").click(function() {
+		SetOriginalFontSize(affectedElements);
+		MatchHeight();
+		textZoomLevel = 0;
+		MatchHeight();
+	});
+
+	function ChangeFontSize(direction) {
+		affectedElements.each(function() {
+			$(this).css("font-size", parseInt($(this).css("font-size"))+direction);
+		});
+	}
+	function SetOriginalFontSize(items) {
+		items.each(function() {
+			$(this).css("font-size", $(this).data("original-size"));
+		});
+	}
+});
+</script>
+
+
+
+
+
+</div>
+</body>
+
+</html>

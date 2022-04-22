@@ -1,0 +1,317 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    </div>
+          <br>
+        </br>
+          </li>
+          <body>
+            <h1 class=" text-center">Ready to Upload the Resume? </h1>
+            <hr class="divider my-4">
+          
+      </div>
+    
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Drag and Drop File Upload</title>
+      <link rel="stylesheet" type="text/css" href="https://demo.plantpot.works/assets/css/normalize.css">
+      <link rel="stylesheet" href="">
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  
+    </head>
+  
+    <body>
+      <div id="container">
+  <div id="upload-area" class="form">
+          <div class="upload-ui">
+            
+            <h2>Drag & Drop Files to Upload</h2>
+            <p>or</p>
+      <div class="container">
+          <div class="contr"><h2>You can select the file and click Upload button</h2></div>
+    
+          <div class="upload_form_cont">
+            <form id="upload_form" enctype="multipart/form-data" method="post">
+              {% csrf_token %}
+                <div>
+                    <div><label for="myfile">Please select pdf file</label></div>
+                    <div><input type="file" name="file" accept="application/pdf,application" id="myfile" /></div>
+                </div>
+                <div>
+                    <input type="submit" value="Upload" />
+                </div>
+               
+                
+  
+                <div id="progress_info">
+                    <div id="progress"></div>
+                    <div id="progress_percent">&nbsp;</div>
+                    <div class="clear_both"></div>
+                </div>
+                <div>
+                  <div id="b_transfered">&nbsp;</div>
+                  
+              </div>
+            </form>
+        </div>
+    </div>
+    </div>
+  </body>
+  <!-- <script>
+    // common variables
+  var iBytesUploaded = 0;
+  var iBytesTotal = 0;
+  var iPreviousBytesLoaded = 0;
+  var iMaxFilesize = 1048576; // 1MB
+  var oTimer = 0;
+  var sResultFileSize = '';
+  
+  
+  
+  
+  function bytesToSize(bytes) {
+      var sizes = ['Bytes', 'KB', 'MB'];
+      if (bytes == 0) return 'n/a';
+      var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+      return (bytes / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+  };
+  
+  
+  
+  function startUploading() {
+      // cleanup all temp states
+      iPreviousBytesLoaded = 0;
+      document.getElementById('progress_percent').innerHTML = '';
+      var oProgress = document.getElementById('progress');
+      oProgress.style.display = 'block';
+      oProgress.style.width = '0px';
+  
+      // get form data for POSTing
+      //var vFD = document.getElementById('upload_form').getFormData(); // for FF3
+      var vFD = new FormData(document.getElementById('upload_form')); 
+  
+      // create XMLHttpRequest object, adding few event listeners, and POSTing our data
+      var oXHR = new XMLHttpRequest();
+      oXHR.upload.addEventListener('progress', uploadProgress, false);
+      oXHR.addEventListener('load', uploadFinish, false);
+      oXHR.open('POST', 'upload.php');
+      oXHR.send(vFD);
+  
+      // set inner timer
+      oTimer = setInterval(doInnerUpdates, 300);
+  }
+  
+  
+  function uploadProgress(e) { // upload process in progress
+      if (e.lengthComputable) {
+          iBytesUploaded = e.loaded;
+          iBytesTotal = e.total;
+          var iPercentComplete = Math.round(e.loaded * 100 / e.total);
+          var iBytesTransfered = bytesToSize(iBytesUploaded);
+  
+          document.getElementById('progress_percent').innerHTML = iPercentComplete.toString() + '%';
+          document.getElementById('progress').style.width = (iPercentComplete * 4).toString() + 'px';
+          document.getElementById('b_transfered').innerHTML = iBytesTransfered;
+          if (iPercentComplete == 100) {
+              oUploadResponse.innerHTML = '<h1>Please wait...processing</h1>';
+              oUploadResponse.style.display = 'block';
+          }
+      } else {
+          document.getElementById('progress').innerHTML = 'unable to compute';
+      }
+  }
+  
+  function uploadFinish(e) { // upload successfully finished
+     
+      oUploadResponse.innerHTML = e.target.responseText;
+      oUploadResponse.style.display = 'block';
+  
+      document.getElementById('progress_percent').innerHTML = '100%';
+      document.getElementById('progress').style.width = '400px';
+      document.getElementById('filesize').innerHTML = sResultFileSize;
+  
+      clearInterval(oTimer);
+  }
+</script>   -->
+
+    <style>
+      
+           
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  #container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    padding: 10px;
+    padding-right: 200px;
+  }
+ 
+  .form {
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+  }
+  .upload-ui {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150%;
+    border: 2px dashed #3d3935;
+    padding: 20px;
+    
+  }
+  
+  .upload-ui h2 {
+    margin-top: 10px;
+    color: #3d3935;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .upload-ui p {
+    margin: 8px 0;
+    font-size: 1.25rem;
+  }
+  .input-upload {
+    display: none;
+  }
+  .btn-upload {
+    width: 200px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #31312f;
+    color: #fff;
+    font-size: 1.25rem;
+    outline: none;
+    cursor: pointer;
+  }
+  .site-footer{
+    margin-top:30px;
+  }
+  .file-name {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  .dragover {
+    background-color: rgba(0, 0, 0, .2);
+  }
+  
+      .upload_form_cont {
+        background: -moz-linear-gradient(#ffffff, #f2f2f2);
+        background: -ms-linear-gradient(#ffffff, #f2f2f2);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f2f2f2));
+        background: -webkit-linear-gradient(#ffffff, #f2f2f2);
+        background: -o-linear-gradient(#ffffff, #f2f2f2);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2');
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2')";
+        background: linear-gradient(#ffffff, #f2f2f2);
+    
+        color:#000;
+        overflow:hidden;
+    }
+    #upload_form {
+      
+        padding:90px;
+        width:700px;
+    }
+   
+    #upload_form > div {
+        margin-bottom:10px;
+    }
+    #speed,#remaining {
+        float:left;
+        width:100px;
+    }
+    #b_transfered {
+        float:right;
+        text-align:right;
+        font-size:10pt;
+    }
+    .clear_both {
+        clear:both;
+    }
+    input {
+        border:2px solid #ccc;
+        font-size:15pt;
+        padding:9px 10px;
+        width:515px;
+    }
+   
+    #progress_info {
+        font-size:10pt;
+    }
+    #fileinfo,#error,#error2,#abort,#warnsize {
+        color:#aaa;
+        display:none;
+        font-size:10pt;
+        font-style:italic;
+        margin-top:10px;
+    
+}
+    #progress {
+        border:1px solid black;
+        display:none;
+        float:left;
+        height:14px;
+    
+        border-radius:10px;
+    
+  
+        
+        background: linear-gradient(grey, grey);
+    }
+    #progress_percent {
+        float:right;
+    }
+    #upload_response {
+        margin-top: 10px;
+        padding: 20px;
+        overflow: hidden;
+        display: none;
+        border: 1px solid #ccc;
+    
+        border-radius:10px;
+        -moz-border-radius:10px;
+        -ms-border-radius:10px;
+        -o-border-radius:10px;
+        -webkit-border-radius:10px;
+    
+        box-shadow: 0 0 5px #ccc;
+        background: -moz-linear-gradient(#bbb, #eee);
+        background: -ms-linear-gradient(#bbb, #eee);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bbb), color-stop(100%, #eee));
+        background: -webkit-linear-gradient(#bbb, #eee);
+        background: -o-linear-gradient(#bbb, #eee);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee');
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbb', endColorstr='#eee')";
+        background: linear-gradient(#bbb, #eee);
+    }
+    
+    </style>
+    
+    </html>
+    </div>
+</div>
+</div>
+<style>
+  .text-justify{
+  font-size: 14px;
+line-height: 18px;
+  }
+</style>
+</div>
+</div>
+   
+
+{% endblock %}
