@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import redirect, render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -16,7 +17,9 @@ def resume_parser(request):
             fs = FileSystemStorage()
             filename = fs.save(file.name, file)
             uploaded_file_url = fs.url(filename)
-            request.session['detail'] = kaamdar(uploaded_file_url)
+            data = kaamdar(uploaded_file_url)
+            print(data[0]["name"])
+            request.session['detail'] = data[0]
             return redirect('data_extraction')
     return render(request,'resumeparser.html')
 

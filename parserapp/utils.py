@@ -257,12 +257,12 @@ def extract_languages(nlp_text, noun_chunks):
             languages_spoken.append(token)
     return [i.capitalize() for i in set([i.lower() for i in languages_spoken])]
 
-# def extract_address(text):
-#     nlp = spacy.load('en_core_web_sm')
-#     doc = nlp(text)
-#     for ent in doc.ents:
-#         if ent.label_ in ['LOC', 'GPE']:
-#             return ent.text
+def extract_address(text):
+     nlp = spacy.load('en_core_web_sm')
+     doc = nlp(text)
+     for ent in doc.ents:
+         if ent.label_ in ['LOC', 'GPE']:
+             return ent.text
 
 def extract_experience(resume_text):
     '''

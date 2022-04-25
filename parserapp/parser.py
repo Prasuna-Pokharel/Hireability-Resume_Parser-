@@ -42,7 +42,7 @@ class ResumeParser(object):
         edu                  = utils.extract_education([sent.string.strip() for sent in self.__nlp.sents])
         nationality          = utils.extract_nationality(self.__nlp, self.__noun_chunks)
         languages            = utils.extract_languages(self.__nlp, self.__noun_chunks)
-        #               = utils.extract_address(self.__text)
+        address              = utils.extract_address(self.__text)
         experience           = utils.extract_experience(self.__text)
         
         self.__details['name']             = name
@@ -53,7 +53,7 @@ class ResumeParser(object):
         self.__details['education']        = edu
         self.__details['nationality']      = nationality
         self.__details['languages']        = languages
-        # self.__details['address'] = address
+        self.__details['address']          = address
         self.__details['experience']       = experience
         return
 
@@ -82,21 +82,22 @@ def resume_result_wrapper(resume):
 def kaamdar(file):
     pool = mp.Pool(mp.cpu_count())
 
-    file = file.strip('/parserapp')
-    file= ''+ file
+    file = file.strip('/')
+    # file= ''+ file
     print(file)
     resumes = [file]
     # resumes = ['input_data/senior-data-scientist-resume-example.pdf']
-    data = []
+    # data = []
     for root, directories, filenames in os.walk('resumes'):
         for filename in filenames:
             file = os.path.join(root, filename)
             resumes.append(file)
+    # print(resumes)
 
     results = [pool.apply_async(resume_result_wrapper, args=(x,)) for x in resumes]
 
-    results = [p.get() for p in results]
+    result = [p.get() for p in results]
 
-    pprint.pprint(results)
-    return results
+    # pprint.pprint(result)
+    return result
 
