@@ -92,7 +92,7 @@ def kaamdar(file):
         for filename in filenames:
             file = os.path.join(root, filename)
             resumes.append(file)
-    # print(resumes)
+    print(resumes)
 
     results = [pool.apply_async(resume_result_wrapper, args=(x,)) for x in resumes]
 

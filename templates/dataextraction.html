@@ -2,6 +2,27 @@
 {% load static %}
 
 {% block content %}
-<h1>Extracted data</h1>
-{{ request.session.detail }}
+<body>
+<h1 class=" text-center">Extracted data</h1>
+<hr class="divider my-4">
+<div class="container modal-content animate">
+<div>Name: {{ request.session.name}}</div>
+<div >Email: {{ request.session.email}}</div>
+<div >Mobile_number: {{ request.session.mobile_number}}</div>
+<div >Technical_skills: {{ request.session.technical_skills}}</div>
+<div >Soft_skills: {{ request.session.soft_skills}}</div>
+<div >Education: {{ request.session.education}}</div>
+<div >Languages: {{ request.session.languages}}</div>
+<div >Experience: {{ request.session.experience}}</div>
+<div >Address: {{ request.session.address}}</div>
+
+
+</div>
+
+<style>
+    .containe{
+        width: 400px;
+    }
+</style>
+</body>
 {% endblock %}

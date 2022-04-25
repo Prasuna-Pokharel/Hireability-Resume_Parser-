@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en" id ="Invert Color">
 
@@ -9,7 +10,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="{{ url_for('static', filename='js/myscripts.js') }}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,7 +33,7 @@
         <div class="container">
             <div class="row w100">
                 <div class="col-lg-5 col-md-12 col-sm-12 col-12 ">
-                    <h3><img  class="float-left" src="{{ url_for('static', filename='image/hireability.png') }}" alt="logo1" id="logo"  width="280px" height="150px"></h3>
+                    <h3><img  class="float-left" src="{% static 'image/hireability.png' %}" alt="logo1" id="logo"  width="280px" height="150px"></h3>
                 </div>
                 
 
