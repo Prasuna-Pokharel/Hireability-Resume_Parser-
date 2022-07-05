@@ -33,16 +33,21 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'resume_parser' %}">Resume Parser </a>
+                        <a class="nav-link" onclick="xyz()" href="">Resume Parser </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dataextraction.html">Data Extraction</a>
+                        <a class="nav-link" href="">Data Extraction</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn login" href="login.html">Login</a>
+                        <a class="btn login" href="{% url 'login' %}">Login</a>
                       </li>
           </ul>
                 
     </ul>
     </div>
+    <script>
+        function xyz() {
+          alert("Please Login First!");
+        }
+        </script>
 </header>

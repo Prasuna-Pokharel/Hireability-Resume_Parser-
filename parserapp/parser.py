@@ -2,7 +2,7 @@ import os
 from . import utils
 import spacy
 import pprint
-from spacy.matcher import Matcher
+from spacy.matcher import Matcher# create matched tokens
 import multiprocessing as mp
 import warnings
 warnings.filterwarnings('ignore')
@@ -19,7 +19,7 @@ class ResumeParser(object):
             'soft_skills'          : None,
             'education'            : None,
             'nationality'          : None,
-            # 'address'              : None,
+            'address'              : None,
             'languages'            : None,
             'experience'           : None,
         }

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="{% static 'js/app.js' %}"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -61,17 +61,17 @@
     <div class="Readability">
     <ul class="navbar1">
                     <li class="nav-item active">
-                        <a class="nav-link" href="home.html">Home </a>
+                        <a class="nav-link" href="{% url 'index' %}">Home </a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" onclick="myFunction()" href="">Resume Parser </a>
+                        <a class="nav-link" onclick="xyz()" href="">Resume Parser </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dataextraction.html">Data Extraction</a>
+                        <a class="nav-link" href="">Data Extraction</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn login" href="login.html">Login</a>
+                        <a class="btn login" href="{% url 'login' %}">Login</a>
                       </li>
           </ul>
                 
@@ -183,11 +183,11 @@
               <ul class="footer-links">
                 
                 &nbsp;
-                <li><a href="faq.html" style="color:whitesmoke";>Frequently Asked Questions</a></li>
+                <li><a href="{% url 'faq' %}" style="color:whitesmoke";>Frequently Asked Questions</a></li>
                 &nbsp;
-                <li><a href="terms.html" style="color:whitesmoke";>Terms and Conditions</a></li>
+                <li><a href="{% url 'terms' %}" style="color:whitesmoke";>Terms and Conditions</a></li>
                 &nbsp;
-                <li><a href="home.html" style="color:whitesmoke";>Back to top</a></li>
+                <li><a href="{% url 'index' %}" style="color:whitesmoke";>Back to top</a></li>
               </ul>
             </div>
   
@@ -235,6 +235,11 @@
   line-height: 18px;
       }
     </style>
+    <script>
+      function xyz() {
+        alert("Please Login First!");
+      }
+      </script>
     <script>
 window.onscroll = function() {myFunction()};
 function myFunction() {

@@ -25,18 +25,23 @@ def extract_text_from_pdf(pdf_path):
     :param pdf_path: path to PDF file to be extracted
     :return: iterator of string of extracted text
     '''
-    # https://www.blog.pythonlibrary.org/2018/05/03/exporting-data-from-pdfs-with-python/
+# iterate over all pages of PDF document
     with open(pdf_path, 'rb') as fh:
         for page in PDFPage.get_pages(fh, 
                                       caching=True,
                                       check_extractable=True):
+          # creating a resoure manager instance
             resource_manager = PDFResourceManager()
+        # create a file handle
             fake_file_handle = io.StringIO()
+        # creating a text converter object
             converter = TextConverter(resource_manager, fake_file_handle, codec='utf-8', laparams=LAParams())
+        # creating a page interpreter
             page_interpreter = PDFPageInterpreter(resource_manager, converter)
             page_interpreter.process_page(page)
  
             text = fake_file_handle.getvalue()
+             # extract text
             yield text
  
             # close open handles
@@ -142,16 +147,19 @@ def extract_skills(nlp_text, noun_chunks):
     :param noun_chunks: noun chunks extracted from nlp text
     :return: list of skills extracted
     '''
+    # removing stop words and implementing word tokenization
     tokens = [token.text for token in nlp_text if not token.is_stop]
+    # reading the csv file
     data = pd.read_csv(os.path.join(os.path.dirname(__file__), './staticfiles/skills.csv')) 
+    # extract values
     skills = list(data.columns.values)
     skillset = []
-    # check for one-grams
+    # check for one-grams (example: python)
     for token in tokens:
         if token.lower() in skills:
             skillset.append(token)
     
-    # check for bi-grams and tri-grams
+    # check for bi-grams and tri-grams (example: machine learning)
     for token in noun_chunks:
         token = token.text.lower().strip()
         if token in skills:
@@ -261,6 +269,7 @@ def extract_address(text):
      nlp = spacy.load('en_core_web_sm')
      doc = nlp(text)
      for ent in doc.ents:
+         # geopolitical entities
          if ent.label_ in ['LOC', 'GPE']:
              return ent.text
 

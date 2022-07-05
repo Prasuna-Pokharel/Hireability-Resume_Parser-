@@ -50,9 +50,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+#import root url to your path
 ROOT_URLCONF = 'resumeparser.urls'
-
+#a list containing setting for all tempaltes
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -68,7 +68,7 @@ TEMPLATES = [
         },
     },
 ]
-
+#wsgi.py related
 WSGI_APPLICATION = 'resumeparser.wsgi.application'
 
 

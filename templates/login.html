@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/app.js' %}"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,7 +33,7 @@
         <div class="container">
             <div class="row w100">
                 <div class="col-lg-5 col-md-12 col-sm-12 col-12 ">
-                    <h3><img  class="float-left" src="{{ url_for('static', filename='image/hireability.png') }}" alt="logo1" id="logo"  width="280px" height="150px"></h3>
+                    <h3><img  class="float-left" src="{% static 'image/hireability.png' %}" alt="logo1" id="logo"  width="280px" height="150px"></h3>
                 </div>
                 
 
@@ -61,17 +61,17 @@
     <div class="Readability">
     <ul class="navbar1">
                     <li class="nav-item active">
-                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link" href="{% url 'index' %}">Home</a>
                     </li>
                     
                     <li class="nav-item">
                         <a class="nav-link" onclick="myFunction()" href="">Resume Parser </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dataextraction.html">Data Extraction</a>
+                        <a class="nav-link" href="">Data Extraction</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn login" href="login.html">Login <span class="sr-only">(current)</span></a>
+                        <a class="btn login" href="{% url 'login' %}">Login <span class="sr-only">(current)</span></a>
                       </li>
           </ul>
                 
@@ -108,7 +108,36 @@
                   font-size: 14px;
               line-height: 18px;
                   }
-                </style>    
+                </style>
+                <script>
+                  //login
+var attempt = 3; // Variable to count number of attempts.
+// Below function Executes on click of login button.
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+var email = document.getElementById("email").value;
+if ( username == "Hireability" && password == "Hireability#123"){
+    if(email == "ps@gmail.com"){
+alert ("Login successfully");
+window.location = "http://127.0.0.1:8000/resumeparser/"; // Redirecting to other page.
+return false;
+}
+}
+else{
+attempt --;// Decrementing by one.
+alert("You have left "+attempt+" attempt;");
+// Disabling fields after 3 attempts.
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("email").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+                </script>    
         
         <!-- Footer -->
     <!-- Site footer -->
@@ -128,11 +157,11 @@
               <ul class="footer-links">
                 
                 &nbsp;
-                <li><a href="faq.html" style="color:whitesmoke";>Frequently Asked Questions</a></li>
+                <li><a href="{% url 'faq' %}" style="color:whitesmoke";>Frequently Asked Questions</a></li>
                 &nbsp;
-                <li><a href="terms.html" style="color:whitesmoke";>Terms and Conditions</a></li>
+                <li><a href="{% url 'terms' %}" style="color:whitesmoke";>Terms and Conditions</a></li>
                 &nbsp;
-                <li><a href="home.html" style="color:whitesmoke";>Back to top</a></li>
+                <li><a href="{% url 'index' %}" style="color:whitesmoke";>Back to top</a></li>
               </ul>
             </div>
   

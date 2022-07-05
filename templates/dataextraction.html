@@ -3,10 +3,11 @@
 
 {% block content %}
 <body>
+    <br></br>
 <h1 class=" text-center">Extracted data</h1>
 <hr class="divider my-4">
 <div class="container modal-content animate">
-<div>Name: {{ request.session.name}}</div>
+<div >Name: {{ request.session.name}}</div>
 <div >Email: {{ request.session.email}}</div>
 <div >Mobile_number: {{ request.session.mobile_number}}</div>
 <div >Technical_skills: {{ request.session.technical_skills}}</div>
@@ -22,6 +23,7 @@
 <style>
     .containe{
         width: 400px;
+       
     }
 </style>
 </body>
