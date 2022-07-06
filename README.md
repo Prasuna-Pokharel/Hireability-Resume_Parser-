@@ -34,6 +34,6 @@ the resume. An executive spent around 10-15 minutes on each resume, summarizing 
 entering the information into the database. This project will help in the automation of this
 procedure.
 
-#technical report
+# Technical report
 
 https://www.researchgate.net/publication/361772014_RESUME_PARSER
