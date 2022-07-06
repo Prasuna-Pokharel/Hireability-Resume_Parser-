@@ -33,3 +33,7 @@ information into their database, and then call the applicant for job counselling
 the resume. An executive spent around 10-15 minutes on each resume, summarizing it and
 entering the information into the database. This project will help in the automation of this
 procedure.
+
+#technical report
+
+https://www.researchgate.net/publication/361772014_RESUME_PARSER
